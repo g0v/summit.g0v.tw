@@ -3,3 +3,28 @@ branches:
   only:
   - gh-pages
   - /.*/
+
+# Disable default behavior: `git submodule update --init --recursive`
+git:
+  submodules: false
+
+# Skip install steps cuz nothing to install
+install: true
+
+# Overwrite defulat test commands
+script:
+  - echo "No test to run. Nothing to build. Just run to update submodule"
+
+# Update submodules
+before_deploy:
+  - git submodule update --init 2018
+  - # add more scripts here. eg: `git update sumodule 2016`
+
+# Deploy to gh-pages branch (https://docs.travis-ci.com/user/deployment/pages/)
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
+  keep-history: true
+  on:
+    branch: gh-pages
