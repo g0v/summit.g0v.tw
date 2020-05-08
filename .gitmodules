@@ -10,3 +10,7 @@
 	path = 2018
 	url = https://github.com/g0v/summit2018.git
 	branch = gh-pages
+[submodule "2020"]
+	path = 2020
+	url = https://github.com/g0v/summit2020.git
+	branch = gh-pages
