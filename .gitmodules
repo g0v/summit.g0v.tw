@@ -16,5 +16,5 @@
 	branch = production-pages
 [submodule "2024"]
 	path = 2024
-	url = https://github.com/g0v/summit2024/
+	url = https://github.com/g0v/summit2024.git
         branch = gh-pages
